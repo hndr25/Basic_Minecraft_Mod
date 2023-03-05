@@ -1,7 +1,7 @@
 package net.frost.tutorial.item;
 
 import net.frost.tutorial.TutorialMod;
-import net.minecraft.world.item.CreativeModeTab;
+import net.frost.tutorial.item.custom.EightBallItem;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
