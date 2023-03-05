@@ -3,6 +3,8 @@ package net.frost.tutorial;
 import com.mojang.logging.LogUtils;
 import net.frost.tutorial.block.ModBlocks;
 import net.frost.tutorial.item.ModItems;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -46,7 +48,7 @@ public class TutorialMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            //ItemBlockRenderTypes.setRenderLayer(ModBlocks.BLUEBEERY_CROP.get(), RenderType.cutout());
         }
     }
 }

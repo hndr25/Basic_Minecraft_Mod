@@ -2,7 +2,9 @@ package net.frost.tutorial.block;
 
 import com.mojang.blaze3d.shaders.Uniform;
 import net.frost.tutorial.TutorialMod;
+import net.frost.tutorial.block.custom.BlueberryCropBlock;
 import net.frost.tutorial.block.custom.JumpyBlock;
+import net.frost.tutorial.block.custom.ZirconLampBlock;
 import net.frost.tutorial.item.ModCreativeModeTab;
 import net.frost.tutorial.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -35,6 +37,10 @@ public class ModBlocks {
             () -> new DropExperienceBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops(),UniformInt.of(3,7)), ModCreativeModeTab.TUTORIAL_TAB);
     public static final RegistryObject<Block> JUMPY_BLOCK = registerBlock("jumpy_block",
             () -> new JumpyBlock(BlockBehaviour.Properties.of(Material.STONE).strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.TUTORIAL_TAB);
+    public static final RegistryObject<Block> ZIRCON_LAMP = registerBlock("zircon_lamp",
+            () -> new ZirconLampBlock(BlockBehaviour.Properties.of(Material.GLASS).strength(6f).requiresCorrectToolForDrops().lightLevel(blockState -> blockState.getValue(ZirconLampBlock.LIT) ? 15:0)), ModCreativeModeTab.TUTORIAL_TAB);
+    public static final RegistryObject<Block> BLUEBEERY_CROP = BLOCKS.register("blueberry_crop",
+            () -> new BlueberryCropBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
 
 
